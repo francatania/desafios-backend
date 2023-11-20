@@ -10,6 +10,10 @@ const publicRouters = (req, res, next) => {
   next();
 }
 
+router.get('/', (req, res)=>{
+  res.redirect('/login')
+})
+
 router.get('/login', publicRouters, (req, res) => {
   res.render('login', { title: 'Login' });
 });
